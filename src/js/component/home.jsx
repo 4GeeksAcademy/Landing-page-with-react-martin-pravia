@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import FirstContainer from "./FirstContainer";
 import Cards from "./Cards";
+import Footer from "./Footer";
 
 //create your first component
 const Home = () => {
@@ -19,11 +20,16 @@ const Home = () => {
     button: "Quiero viajar!",
   };
 
+  const footer = {
+    title: "© Viajes Increibles",
+    year: "2024 "
+  };
   return (
     <>
       <Navbar {...navBar} />
       <FirstContainer {...firstContainer} />
       <Cards />
+      <Footer {...footer} />
     </>
   );
 };
