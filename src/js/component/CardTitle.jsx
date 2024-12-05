@@ -1,21 +1,22 @@
-import React from 'react'
+import React from "react";
 
-const CardTitle = () => {
+const CardTitle = ({ image, title, text, button }) => {
   return (
-    
-    <div className="col">
     <div className="card h-100">
-      <img src="..." className="card-img-top" alt="..."/>
+      <img src={image} className="card-img-top" alt={image} />
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{text}</p>
       </div>
       <div className="card-footer">
-        <small className="text-body-secondary">Last updated 3 mins ago</small>
+        <small className="text-body-secondary">
+          <button type="button" class="btn btn-primary">
+            {button}
+          </button>
+        </small>
       </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default CardTitle
+export default CardTitle;
