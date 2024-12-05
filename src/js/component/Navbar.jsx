@@ -1,24 +1,55 @@
-import React from 'react'
+import React from "react";
 
-const Navbar = () => {
+const Navbar = ({
+  buttonCompany,
+  buttonTrips,
+  buttonPacks,
+  buttonUs,
+  buttonContact,
+}) => {
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    <nav className="navbar navbar-expand-lg bg-dark">
+      <div className="col-md-10 bg-seconday-subtle container-fluid">
+        <a className="navbar-brand text-light" href="#">
+          {buttonCompany}
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <div className="navbar-nav">
+            <a
+              className="nav-link active text-light"
+              aria-current="page"
+              href="#"
+            >
+              {buttonTrips}
+            </a>
+            <a className="nav-link text-light" href="#">
+              {buttonPacks}
+            </a>
+            <a className="nav-link text-light" href="#">
+              {buttonUs}
+            </a>
+            <a className="nav-link text-light" aria-disabled="true">
+              {buttonContact}
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</nav>
-  )
-}
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
